@@ -4,7 +4,7 @@ import { AutenticadorGuard } from "./guards/autenticador.guard";
 export const AppRotas: Routes = [
     {
         path: '',
-        redirectTo: 'login',
+        redirectTo: 'player',
         pathMatch: 'full'
     },
     {
