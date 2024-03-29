@@ -7,7 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BotaoMenuComponent implements OnInit {
 
-  @Input() icon: string;
   @Input() message: string;
 
   constructor() { }
