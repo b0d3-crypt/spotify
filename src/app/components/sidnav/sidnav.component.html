@@ -2,17 +2,37 @@
     <div class="image-container flex flex-center">
         <img src="assets/images/spotify-logo.png" alt="" srcset="">
     </div>
+
     <div class="menu-container flex opcoes">
-        <app-botao-menu message="Homerrrrrrrrrrrrrrrttttttttttt">
+
+        <app-botao-menu [message]="'Home'" [classSelected]="menuSelecionado === 'Home'" (click)="botaoClick('Home')">
             <fa-icon [icon]="iconHome"></fa-icon>
         </app-botao-menu>
-        <app-botao-menu message="Pesquisar">
+
+        <app-botao-menu [message]="'Pesquisar'" [classSelected]="menuSelecionado === 'Pesquisar'"
+            (click)="botaoClick('Pesquisar')">
             <fa-icon [icon]="iconSearch"></fa-icon>
         </app-botao-menu>
-        <app-botao-menu message="Artistas">
+
+        <app-botao-menu [message]="'Artistas'" [classSelected]="menuSelecionado === 'Artistas'"
+            (click)="botaoClick('Artistas')">
             <fa-icon [icon]="iconArtist"></fa-icon>
         </app-botao-menu>
+
     </div>
+
+    <div class="menu-container flex">
+        <span class="playList-titulo">
+            PLAYLISTS
+        </span>
+
+        <div class="playList-scroll">
+            <app-botao-menu>
+                <fa-icon></fa-icon>
+            </app-botao-menu>
+        </div>
+    </div>
+
 </div>
 
 

@@ -41,6 +41,14 @@ $m-entre-menus: 10px;
 
                 }
             }
+
+            .playList-titulo {
+                margin: 10px 0px;
+                align-self: flex-start;
+                font-weight: bold;
+                font-size: .7rem;
+                color: $preto-transparente-30;
+            }
         }
 
     }

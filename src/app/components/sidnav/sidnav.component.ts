@@ -13,9 +13,13 @@ export class SidnavComponent implements OnInit {
   iconArtist = faGuitar;
   iconPlayList = faMusic;
   
+  menuSelecionado = '';
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
+  botaoClick(botao: string) {
+    this.menuSelecionado = botao;
+  }
 }

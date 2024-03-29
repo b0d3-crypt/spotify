@@ -1,4 +1,4 @@
-<button type="button" class="selected">
+<button type="button" [ngClass]="{'selected': classSelected}" (click)="onClick()">
     <ng-content></ng-content>
     <span>{{message}}</span>
 </button>
