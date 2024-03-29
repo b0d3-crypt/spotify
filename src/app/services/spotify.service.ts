@@ -61,6 +61,6 @@ export class SpotifyService {
   definirAccessToken(token: string) {
     this.spotifyApi.setAccessToken(token);
     localStorage.setItem('token', token);
-    this.spotifyApi.skipToNext();
+    //this.spotifyApi.skipToNext();
   }
 }

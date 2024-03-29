@@ -27,5 +27,10 @@
 
         }
 
+        &.selected {
+            background-color: $cor-primaria;
+            color: $cor-branco;
+        }
+
     }
 }
