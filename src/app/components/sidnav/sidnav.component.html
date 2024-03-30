@@ -5,18 +5,16 @@
 
     <div class="menu-container flex opcoes">
 
-        <app-botao-menu [message]="'Home'" [classSelected]="menuSelecionado === 'Home'" (click)="botaoClick('Home')">
-            <fa-icon [icon]="iconHome"></fa-icon>
+        <app-botao-menu [message]="'Home'" [typeIcon]="iconHome" [classSelected]="menuSelecionado === 'Home'"
+            (click)="botaoClick('Home')">
         </app-botao-menu>
 
-        <app-botao-menu [message]="'Pesquisar'" [classSelected]="menuSelecionado === 'Pesquisar'"
-            (click)="botaoClick('Pesquisar')">
-            <fa-icon [icon]="iconSearch"></fa-icon>
+        <app-botao-menu [message]="'Pesquisar'" [typeIcon]="iconSearch"
+            [classSelected]="menuSelecionado === 'Pesquisar'" (click)="botaoClick('Pesquisar')">
         </app-botao-menu>
 
-        <app-botao-menu [message]="'Artistas'" [classSelected]="menuSelecionado === 'Artistas'"
+        <app-botao-menu [message]="'Artistas'" [typeIcon]="iconArtist" [classSelected]="menuSelecionado === 'Artistas'"
             (click)="botaoClick('Artistas')">
-            <fa-icon [icon]="iconArtist"></fa-icon>
         </app-botao-menu>
 
     </div>

@@ -1,4 +1,5 @@
 <button type="button" [ngClass]="{'selected': classSelected}" (click)="onClick()">
     <ng-content></ng-content>
+    <fa-icon [icon]="typeIcon"></fa-icon>
     <span>{{message}}</span>
 </button>
