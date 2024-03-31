@@ -23,11 +23,12 @@
         <span class="playList-titulo">
             PLAYLISTS
         </span>
-
         <div class="playList-scroll">
-            <app-botao-menu>
-                <fa-icon></fa-icon>
-            </app-botao-menu>
+            <div *ngFor="let playList of playListUser">
+                <app-botao-menu [message]="playList.nome" [typeIcon]="iconPlayList"
+                    [classSelected]="menuSelecionado === playList.id" (click)="botaoClick(playList.id)">
+                </app-botao-menu>
+            </div>
         </div>
     </div>
 
