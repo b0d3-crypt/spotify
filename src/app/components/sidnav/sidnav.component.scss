@@ -72,6 +72,15 @@ $h-desconsiderar: calc($h-spotify-logo + $h-spotify-opces + $h-footer-user);
                 }
             }
         }
+    }
 
+    .usuario-info {
+        flex-grow: 0;
+        display: block;
+        bottom: 0;
+        align-self: flex-end;
+        height: $h-footer-user;
+        width: 100%;
+        background-color: red;
     }
 }
