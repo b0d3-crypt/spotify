@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import Spotify from 'spotify-web-api-js';
 import { SpotifyConfiguration } from 'src/environments/environment';
 import { SpotifyPlayListToPlayList, SpotifyUsertoUser } from '../Common/spotifyHelper';
@@ -14,7 +15,9 @@ export class SpotifyService {
 
   usuario: IUsuario;
   
-  constructor() { 
+  constructor(
+    private _router: Router
+  ) { 
     this.spotifyApi = new Spotify();
   }
 
@@ -49,6 +52,11 @@ export class SpotifyService {
     const scopes = `scope=${SpotifyConfiguration.scopes.join('%20')}&`;
     const responseType = `response_type=token&show_dialog=true`;
     return authEndPointing + clinetId + redirectUrl + scopes + responseType;
+  }
+
+  logout() {
+    localStorage.clear();
+    this._router.navigate(['/login']);
   }
 
   obterTokenUrlCallBack() {

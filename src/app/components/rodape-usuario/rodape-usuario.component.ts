@@ -11,11 +11,17 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 export class RodapeUsuarioComponent implements OnInit {
 
   usuario: IUsuario = null;
-  logout = faSignOutAlt;
+  logoutIcon = faSignOutAlt;
 
   constructor(
     private _spotifyService: SpotifyService,
   ) { }
 
-  ngOnInit(): void { }
+  ngOnInit() { 
+    this.usuario = this._spotifyService.usuario
+  }
+
+  logout() {
+    this._spotifyService.logout();
+  }
 }
