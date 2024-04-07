@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faGuitar, faHome, faMusic, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { IPlayList } from 'src/app/interfaces/IPlayList';
 import { SpotifyService } from 'src/app/services/spotify.service';
@@ -21,6 +22,7 @@ export class SidnavComponent implements OnInit {
 
   constructor(
     private _spotifyService: SpotifyService,
+    private _router: Router
   ) { }
 
   ngOnInit(): void { 
@@ -29,9 +31,13 @@ export class SidnavComponent implements OnInit {
 
   botaoClick(botao: string) {
     this.menuSelecionado = botao;
+    this._router.navigate(['/player/'+botao])
+
   }
 
   async getPlayList() {
     this.playListUser = await this._spotifyService.getPlayListUser();
   }
+
+
 }
